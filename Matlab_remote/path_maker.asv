@@ -1,0 +1,15 @@
+t = linspace(0,130,131);
+plot(2*sin(0.1*t), 4*sin(0.05*t))
+hold on
+scatter(0,0,'r')
+t2 = linspace(0,130,28);
+
+size_
+
+
+ for i=1:length(t2)
+    scatter(2*sin(0.1*i*4.8148), 4*sin(0.05*i*4.8148),'r')
+    data_array(3*(i-1)+1)= 2*sin(0.1*i*4.8148);
+    data_array(3*(i-1)+2)= 4*sin(0.05*i*4.8148);
+    data_array(3*(i-1)+3)= 0;
+ end

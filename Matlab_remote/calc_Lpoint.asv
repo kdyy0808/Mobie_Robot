@@ -1,0 +1,30 @@
+function [x1,y1,x2,y2] = calc_Lpoint(x_robot_center,y_robot_center,Lookahead_Distance);
+    L = Lookahead_Distance;
+    
+    
+    a = x_robot_center;%x_cord
+    b = y_robot_center;%y_cord
+
+    t = linspace(0,130,28);
+    t = t2*4.8148;
+
+    disp("calc time")
+    tic
+    syms x y
+    %eqn1 = x^2 +y^2 == 4;
+    eqn1 = x==sin(0.1*t);
+    eqn3 = y==2*sin(0.05*t);
+    eqn2 = (x-a)^2+(y-b)^2 ==L*L;
+    
+  
+
+
+    sol = solve([eqn1,eqn2,eqn3], [x,y,);
+    toc
+    x1 = double(sol.x(1));
+    x2 = double(sol.x(2));
+    
+    y1 = double(sol.y(1));
+    y2 = double(sol.y(2));
+
+end
